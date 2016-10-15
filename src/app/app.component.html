@@ -1,13 +1,22 @@
 <!-- navigation bar -->
 <nav class="navbar navbar-light bg-faded" *ngIf="isRouteNotActiveByMe('/login')">
-  <a class="navbar-brand" href="#">Company</a>
+  <a class="navbar-brand m-b-0" href="#"><img width="120px" src="/assets/Sri_Lanka_Post_logo.png" /></a>
   <ul class="nav navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/']" [routerLinkActive]="['active']">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" [routerLink]="['/accept']" [routerLinkActive]="['active']">Accept<span class="sr-only">(current)</span></a>
     </li>
+
     <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/checking']" [routerLinkActive]="['active']">Checking<span class="sr-only">(current)</span></a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/deliver']" [routerLinkActive]="['active']">Deliver<span class="sr-only">(current)</span></a>
+    </li>
+
+    <li class="nav-item pull-xs-right">
       <a class="nav-link"
-      [routerLink]="['/login']" [routerLinkActive]="['active']">Login</a>
+      [routerLink]="['/login']" [routerLinkActive]="['active']">Sign Out</a>
     </li>
   </ul>
 </nav>

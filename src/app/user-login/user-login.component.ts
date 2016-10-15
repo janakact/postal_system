@@ -30,7 +30,7 @@ export class UserLoginComponent implements OnInit {
       //console.log("onSubmit - " + this.details.username + " - "+ this.details.password)
       this.dataService.validateLogin(this.details).then(result => {
           if (result)
-              this.router.navigate(['']);
+              this.router.navigate(['accept']);
           else
             this.valid = false;
       }

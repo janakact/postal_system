@@ -8,12 +8,20 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { HomeComponent } from './home/home.component';
+import { TodayStatComponent } from './today-stat/today-stat.component';
+import { CheckingComponent } from './checking/checking.component';
+import { DeliverComponent } from './deliver/deliver.component';
+import { SubmitSuccessComponent } from './submit-success/submit-success.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
-    HomeComponent
+    HomeComponent,
+    TodayStatComponent,
+    CheckingComponent,
+    DeliverComponent,
+    SubmitSuccessComponent
   ],
   imports: [
     BrowserModule,

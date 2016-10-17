@@ -27,7 +27,11 @@ export class CheckingComponent implements OnInit {
 
 
   onSubmit(): void {
+    this.loading = true;
+    this.loaded = false;
+    setTimeout(()=>{
     this.router.navigate(['success/checking']);
+  },1000);
   }
 
 }

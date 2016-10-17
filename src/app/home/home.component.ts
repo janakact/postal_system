@@ -8,13 +8,21 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+
   constructor( private router:Router) { }
 
+  loading = false;
+  loaded = true;
   ngOnInit() {
   }
 
+
   onSubmit(): void {
-              this.router.navigate(['success/accept']);
+    this.loading = true;
+    this.loaded = false;
+    setTimeout(()=>{
+                this.router.navigate(['success/accept']);
+  },1000);
   }
 
 }

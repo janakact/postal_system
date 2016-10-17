@@ -17,6 +17,9 @@ export class UserLoginComponent implements OnInit {
       rememberMe:true
   };
   valid = true;
+  showLogin = true;
+  showCode = false;
+  loading = false;
 
   constructor(
     private router:Router,
@@ -26,14 +29,33 @@ export class UserLoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmitLogin():void{
+    //console.log("onSubmit - " + this.details.username + " - "+ this.details.password)
+    this.dataService.validateLogin(this.details).then(result => {
+        if (result)
+        {
+          this.showLogin = false;
+          this.loading = true;
+          this.valid = true;
+          setTimeout(()=>{
+            this.loading = false;
+            this.showCode  = true;
+          }, 3000);
+
+        }
+        else
+          this.valid = false;
+          }
+        );
+  }
+
   onSubmit(): void {
       //console.log("onSubmit - " + this.details.username + " - "+ this.details.password)
-      this.dataService.validateLogin(this.details).then(result => {
-          if (result)
-              this.router.navigate(['accept']);
-          else
-            this.valid = false;
-      }
-    );
+
+      this.loading = true;
+      this.showCode = false;
+      setTimeout(()=>{
+      this.router.navigate(['accept']);
+    },2000);
   }
 }

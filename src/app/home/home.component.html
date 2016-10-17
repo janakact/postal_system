@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <div class="card card-block">
+
+      <img *ngIf="loading" width="400px" src="/assets/loading.gif" />
+
+      <div *ngIf="loaded" class="card card-block">
         <h2>Accept an item</h2><br>
         <form>
 

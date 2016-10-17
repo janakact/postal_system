@@ -28,7 +28,11 @@ export class DeliverComponent implements OnInit {
 
 
   onSubmit(): void {
+    this.loading = true;
+    this.loaded = false;
+    setTimeout(()=>{
     this.router.navigate(['success/deliver']);
+  },1000);
   }
 
 }

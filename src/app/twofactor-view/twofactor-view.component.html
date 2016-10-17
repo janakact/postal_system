@@ -1,5 +1,5 @@
 <div class="container">
-        <form class="form-signin" *ngIf="showLogin" >
+        <form class="form-signin" >
           <h2 class="form-signin-heading">Sign In</h2>
           <div [hidden]="valid" class="alert alert-danger"> Invalid Login details </div>
 
@@ -12,21 +12,6 @@
               <input [(ngModel)]="details.rememberMe" name="rememberMe" type="checkbox"> Remember me
             </label>
           </div>
-          <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmitLogin()">Sign in</button>
-        </form>
-
-<form class="form-signin">
-        <img *ngIf="loading" width="400px" src="/assets/loading.gif" />
-        </form>
-
-        <form class="form-signin" *ngIf="showCode"  >
-          <h3 class="form-signin-heading">Verify</h3>
-
-          <h6>You should receive an SMS text message with your two-factor authentication code. Please enter the 6 digit code here.</h6>
-          <label  >Verification Code</label>
-          <input id="inputUsername" class="form-control" placeholder="Code" required="" autofocus="" name="code">
-          <br>
           <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Sign in</button>
         </form>
-
 </div>

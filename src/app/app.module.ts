@@ -12,6 +12,7 @@ import { TodayStatComponent } from './today-stat/today-stat.component';
 import { CheckingComponent } from './checking/checking.component';
 import { DeliverComponent } from './deliver/deliver.component';
 import { SubmitSuccessComponent } from './submit-success/submit-success.component';
+import { TwofactorViewComponent } from './twofactor-view/twofactor-view.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SubmitSuccessComponent } from './submit-success/submit-success.componen
     TodayStatComponent,
     CheckingComponent,
     DeliverComponent,
-    SubmitSuccessComponent
+    SubmitSuccessComponent,
+    TwofactorViewComponent
   ],
   imports: [
     BrowserModule,
